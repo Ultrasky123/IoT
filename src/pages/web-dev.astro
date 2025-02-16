@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout sideBarActiveItemID="web-dev">
+  <div class="mb-5">
+    <div class="text-5xl w-full text-center font-bold">Website Developer</div>
+  </div>
+
+  <div class="mb-10 text-justify"> 
+    Sistem monitoring yang digunakan untuk melihat data real-time yang masuk dari Smart Mannequin. Sistem yang dikembangkan semula
+    menggunakan HTML dasar. Dimana website belum memanfaatkan REST API. Lalu dikembangkan lagi menggunakan Firebase agar data dapat
+    diambil dengan lebih mudah. Lalu dikembangkan lagi menggunakan framework dan REST API agar database tidak terlalu berat dalam menerima
+    puluhan sumber data sekaligus.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Pengembangan Saat Ini</div>
+  </div>
+
+  <div class="mb-5 text-justify">
+    Sistem menggunakan framework Laravel9 yang sekarang sudah diconvert menjadi React dan NodeJS. Pada livescreen page, ditampilkan real-time data
+    dari 13 jenis sensor sekaligus untuk dapat dilihat dari segala sisi tentang apa yang terjadi pada maneken setiap waktunya. Website ini memanfaatkan
+    pengiriman HTTP dari LoRa receiver - Chirpstack - website. Tujuan adanya LoRa adalah ketidakmampuan sinyal WiFi untuk menembus masuk dan keluar sebuah
+    kendaraan tempur yang tertutup rapat. Maka seluruh sensor harus dihubungkan dengan LoRa transmitter baik dari mikrokontroler yang sudah dipasangi LoRa
+    module maupun mikrokontroler yang dipasangkan LoRa transmitter secara manual.  
+  </div>
+
+  <div class="mb-5 text-justify">
+    <img src="/website.png" />
+  </div>
+
+  
+</BaseLayout>
