@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout sideBarActiveItemID="early-warning-system">
+  <div class="mb-5">
+    <div class="text-5xl w-full text-center font-bold">Early Warning System for Brake and Tires</div>
+  </div>
+
+  <div class="mb-10 text-justify"> 
+    Riset ini merupakan salah satu riset yang bekerja sama dengan PT Indo Trans Teknologi dalam mengembangkan suatu metode 
+    untuk memperingatkan pengendara kapan harus melakukan maintenance kendaraan. Sistem yang dikembangkan berupa prototipe kampas rem,
+    TPMS custom, pemasangan LiDAR pada spakbor, dan RFID long range. 
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Prototipe</div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="w-1/2 h-1/2">
+    <img src="/kampas-rem.png" />
+    </div>
+
+    <div class="mb-5 text-justify">
+        Sistem kampas rem yang dikembangkan menggunakan pemutusan kabel untuk mengetahui kualitas dari kampas rem. Namun, kami membuat
+        prototipe kampas rem menggunakan campuran serbuk kayu halus - serbuk kayu kasar - lem agar dapat dirusak dengan cepat. Prototipe
+        ini kemudian dilobangi dan dipasangkan kabel anti panas lalu dihubungkan dengan ESP32 untuk kemudian dikirimkan ke website.
+    </div>
+
+    <div class="w-1/2 h-1/2">
+    <img src="/TPMS.jpg" />    
+    </div>
+
+    <div class="mb-5 text-justify">
+        TPMS EWS (Early Warning System) adalah perpaduan dari sistem TPMS eurosens dan TPMS otoproject. Dimana kami menggunakan sensor
+        MS5803-14BA yang menggabungkan sensor suhu dan tekanan yang dicover oleh 3d design. Power system menggunakan 2 buah baterai CR2032.
+        Sensor ini dihubungkan dengan ESP32C3 secara kabel di dalam cover lalu mengirimkan data secara bluetooth deep-sleep mode ke ESP32 Master.
+    </div>
+
+    <div class="w-1/2 h-1/2">
+    <img src="/LiDAR.jpg" />    
+    </div>
+
+    <div class="mb-5 text-justify">
+        Pada dasarnya, LiDAR kami pasangkan secara langsung pada spakbor mobil mengarah ke tapak ban. Berfungsi untuk mengukur perbedaan jarak antara
+        titik tertebal ban dengan keadaan sesungguhnya. Sensor ini diberikan enclosure agar tetap berfungsi di keadaan yang tidak normal. Melalui 
+        penelitian ini, diharapkan pengembangan LiDAR akan lebih banyak untuk mengetahui tingkat keausan ban. 
+    </div>
+
+    <div class="w-1/2 h-1/2">
+    <img src="/RFID.png" />    
+    </div>
+
+    <div class="mb-5 text-justify">
+        Sistem pendeteksi pencurian ban menggunakan produk EL-UHF-RF014 dari Electron. Sistem ini berfungsi untuk membaca tire tag yang dimiliki
+        setiap ban sehingga dapat mengetahui apakah ban masih asli atau tidaknya. Sistem ini dipasangkan pada pool/bengkel dengan tire tag yang dibakar
+        dalam masing-masing ban sebelumnya. 
+    </div>
+    </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Hasil Pengujian</div>
+  </div>
+
+  <div class="mb-5 text-justify">
+    Pengujian dilakukan pada 30 November 2024. Bertempat di Lobby FIT, Telkom University selama 2 hari. Pengujian yang dilakukan adalah TPMS, LiDAR, dan 
+    RFID yang dipasangkan langsung pada mobil Suzuki Ertiga. Hasil pengujian dari ketiga sensor mendapatkan hasil yang cukup baik. Dimana hasil TPMS memberikan 
+    kemiripan dengan kedua sensor TPMS eurosens dan otoproject dengan rentang perbedaan nilai di 2. Untuk LiDAR, terjadi sedikit anomali dimana sensor menangkap 
+    hasil pengukuran hingga -10000, lalu RFID mendapatkan pembacaan di minimum 1 meter jarak antara antena RFID dengan tire tag dalam ban.
+  </div>
+
+  <div class="mb-10"></div>
+  <div class="mb-3">
+  <b>Short Video Pengujian Lapangan EWS </b> : <a href="https://www.instagram.com/reel/DD9F-mBJSOO/?igsh=MTYwMjBxYTNucW1idw==">Klik Link Ini (Instagram)</href>
+  </div>
+  
+</BaseLayout>
