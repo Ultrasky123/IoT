@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout sideBarActiveItemID="smart-skin">
+  <div class="mb-5">
+    <div class="text-5xl w-full text-center font-bold">Pengembangan Software</div>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">SAUVC 2024</div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Bagian Video -->
+    <div class="flex flex-col items-center">
+      <div class="w-1/2 h-1/2">
+        <video autoplay muted loop>
+          <source src="/demo_robot.mp4" />
+        </video>
+      </div>
+      <div class="w-1/2 h-1/2 mt-4">
+        <video autoplay muted loop>
+          <source src="/coding_mix_robot.mp4" />
+        </video>
+      </div>
+    </div>
+
+    <!-- Bagian Deskripsi -->
+    <div class="w-full h-full text-justify">
+      Melakukan konfigurasi gerakan autonomous pada Underwater Robot menggunakan Python. Selain itu, melakukan training
+      dan testing untuk memastikan gerakan robot benar sesuai dengan PID yang sudah ditetapkan. Ada juga beberapa maintenance
+      yang dilakukan seperti :
+      <div class="mb-10"></div>
+      <ul class="list-disc pl-10">
+        <li>Kalibrasi sensor</li>
+        <li>Pengecekan kebocoran harian</li>
+        <li>Pengecekan komponen penting robot</li>
+      </ul>
+      <div class="mb-10"></div>
+      
+      Dalam pengembangan yang dilakukan sangat berkaitan dengan ROS (Robot Operating System). Mengonfigurasi keakuratan sensor
+      yang digunakan, seperti pada kamera tracking (Realsense t265), IMU, dan depth sensor yang digabungkan agar robot dapat berjalan
+      sesuai yang diprogram tanpa adanya miss.
+    </div>
+  </div>
+
+  <div class="mb-10"></div>
+  <div class="mb-3">
+    <b>Short Video SAUVC 2024 </b> : 
+    <a href="https://www.instagram.com/reel/C5dtERYPHB6/?igsh=Nno3djlwMjBiMmpp" target="_blank">Klik Link Ini (Instagram)</a>
+  </div>
+</BaseLayout>

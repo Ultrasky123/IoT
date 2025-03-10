@@ -7,9 +7,19 @@ const activeClass = "bg-base-300"; // For primary color replace with `active` cl
     <li><a class="py-3 text-base" id="home" href="/">Home</a></li>
     <li><a class="py-3 text-base" id="projects" href="#" onclick="toggleDropdown(event)">Projects</a>
         <ul class="pl-4 hidden" id="projects-dropdown">
-            <li><a class="py-3 text-base" id="early-warning-system" href="/early-warning-system">Early Warning System</a></li>
-            <li><a class="py-3 text-base" id="smart-skin" href="/smart-skin">Smart Skin</a></li>
-            <li><a class="py-3 text-base" id="web-dev" href="/web-dev">Web Dev</a></li>
+            <li><a class="py-3 text-base" id="iot" href="#" onclick="toggleDropdown(event)">IoT</a>
+                <ul class="pl-4 hidden" id="iot-dropdown">
+                    <li><a class="py-3 text-base" id="early-warning-system" href="/early-warning-system">Early Warning System</a></li>
+                    <li><a class="py-3 text-base" id="smart-skin" href="/smart-skin">Smart Skin</a></li>
+                    <li><a class="py-3 text-base" id="web-dev" href="/web-dev">Web Dev</a></li>
+                </ul>
+            </li>
+            <li><a class="py-3 text-base" id="robotic" href="#" onclick="toggleDropdown(event)">Robotic</a>
+                <ul class="pl-4 hidden" id="robotic-dropdown">
+                    <li><a class="py-3 text-base" id="robotic-hardware" href="/robotic-hardware">Hardware</a></li>
+                    <li><a class="py-3 text-base" id="robotic-software" href="/robotic-software">Software</a></li>
+                </ul>
+            </li>
         </ul>
     </li>
     <li><a class="py-3 text-base" id="cv" href="/cv">CV</a></li>
@@ -32,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.toggleDropdown = function(event) {
         event.preventDefault();
-        const dropdown = document.getElementById('projects-dropdown');
+        const dropdown = event.target.nextElementSibling;
         if (dropdown) {
             dropdown.classList.toggle('hidden');
         }
